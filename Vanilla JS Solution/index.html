@@ -18,34 +18,39 @@
         <section class="calculator-section">
             <h1>Car Leasing Calculator</h1>
             <form class="lease-calculator">
-                <div>
-                    <label for="car-type">Car Type:</label>
-                    <select name="car-type" id="car-type">
-                        <option value="brand-new">Brand New</option>
-                        <option value="used">Used</option>
-                    </select>
-                    <label for="car-value">Car Value (€10,000 - €200,000):</label>
-                    <input type="number" min="10000" max="200000" id="lease-period" value="50000">
-                    <input type="range" id="car-value" min="10000" max="200000" value="50000">
-
-                </div>
-                <div>
-                    <div>
+                <fieldset>
+                    <div class="form-section">
+                        <label for="car-type">Car Type:</label>
+                        <select name="car-type" id="car-type">
+                            <option value="brand-new" selected>Brand New</option>
+                            <option value="used">Used</option>
+                        </select>
+                    </div>
+                    <div class="form-section">
+                        <label for="car-value">Car Value (€10,000 - €200,000):</label>
+                        <input type="number" name="car-value" id="car-value" min="10000" max="200000" value="50000"
+                            class="car-value">
+                        <input type="range" id="car-value" min="10000" max="200000" value="50000" class="car-value">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-section">
                         <label for="lease-period">Lease Period (months):</label>
                         <select id="lease-period" name="lease-period">
-                            <option value="12">12</option>
+                            <option value="12" selected>12</option>
                             <option value="12">24</option>
                             <option value="12">36</option>
                             <option value="12">48</option>
                             <option value="12">60</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="form-section">
                         <label for="down-payment">Down Payment (10%-50%):</label>
-                        <input type="number" step="5" min="10" max="50" id="down-payment" value="20">
-                        <input type="range" id="down-payment" min="10" max="50" value="20">
+                        <input type="number" name="down-payment" id="down-payment" step="5" min="10" max="50" value="20"
+                            class="down-payment">
+                        <input type="range" id="down-payment" min="10" max="50" value="20" class="down-payment">
                     </div>
-                </div>
+                </fieldset>
             </form>
             <div class="leasing-details">
                 <h3>Leasing Details:</h3>
