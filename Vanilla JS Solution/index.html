@@ -21,22 +21,23 @@
                 <fieldset>
                     <div class="form-section">
                         <label for="car-type">Car Type:</label>
-                        <select name="car-type" id="car-type">
+                        <select name="car-type" id="car-type" class="car-type">
                             <option value="brand-new" selected>Brand New</option>
                             <option value="used">Used</option>
                         </select>
                     </div>
                     <div class="form-section">
                         <label for="car-value">Car Value (€10,000 - €200,000):</label>
-                        <input type="number" name="car-value" id="car-value" min="10000" max="200000" value="50000"
+                        <input type="number" name="car-value" id="car-value" min="10000" max="200000" value="120000"
+                            step="100" class="car-value">
+                        <input type="range" id="car-value" min="10000" max="200000" value="120000" step="100"
                             class="car-value">
-                        <input type="range" id="car-value" min="10000" max="200000" value="50000" class="car-value">
                     </div>
                 </fieldset>
                 <fieldset>
                     <div class="form-section">
                         <label for="lease-period">Lease Period (months):</label>
-                        <select id="lease-period" name="lease-period">
+                        <select id="lease-period" name="lease-period" class="lease-period">
                             <option value="12" selected>12</option>
                             <option value="12">24</option>
                             <option value="12">36</option>
@@ -46,21 +47,23 @@
                     </div>
                     <div class="form-section">
                         <label for="down-payment">Down Payment (10%-50%):</label>
-                        <input type="number" name="down-payment" id="down-payment" step="5" min="10" max="50" value="20"
-                            class="down-payment">
-                        <input type="range" id="down-payment" min="10" max="50" value="20" class="down-payment">
+                        <input type="number" name="down-payment" id="down-payment" min="10" max="50" value="10" step="5"
+                            class="down-payment-input">
+                        <input type="range" id="down-payment" min="10" max="50" value="10" step="5"
+                            class="down-payment-input">
                     </div>
                 </fieldset>
             </form>
             <div class="leasing-details">
                 <h3>Leasing Details:</h3>
                 <div class="total-lease-down-payment">
-                    <p>Total Leasing Cost: €<span class="total-lease">54545645</span></p>
-                    <p>Down Payment: €<span class="total-lease">12000</span></p>
+                    <p>Total Leasing Cost: €<span class="total-lease">120000</span></p>
+                    <p>Down Payment: €<span class="down-payment">12000</span></p>
                 </div>
+                <div class="separator"></div>
                 <div class="montly-installment-interst-rate">
-                    <p>Monthly Installment: €<span class="total-lease">2000</span></p>
-                    <p>Interest Rate: <span class="total-lease">5</span>%</p>
+                    <p>Monthly Installment: €<span class="monthly-installment">2000</span></p>
+                    <p>Interest Rate: <span class="interest-rate">2.99</span>%</p>
                 </div>
             </div>
         </section>
