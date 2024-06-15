@@ -21,7 +21,7 @@ body {
 .calculator-section {
   background-color: #fff;
   color: #000;
-  padding: 3.2rem 6.4rem;
+  padding: 4.8rem 2.4rem;
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
 }
@@ -36,7 +36,7 @@ h3 {
 }
 
 .lease-calculator {
-  padding: 2.4rem;
+  padding: 0 1.6rem 1.6rem;
   font-size: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -54,12 +54,12 @@ h3 {
 .lease-calculator input,
 .lease-calculator select {
   display: block;
-  font-weight: bold;
+  font-weight: 450;
 }
 .lease-calculator input,
 .lease-calculator select {
   width: 100%;
-  padding: 0.8rem 1.6rem;
+  padding: 1.2rem 1.6rem;
   font-size: 1.8rem;
   border-radius: 0.6rem;
   border: 1px solid #c3c3c3;
@@ -67,11 +67,11 @@ h3 {
 }
 
 .leasing-details {
-  padding: 2.4rem;
+  padding: 2.4rem 2.4rem 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto 1fr;
   column-gap: 4.8rem;
-  font-weight: bold;
+  font-weight: 450;
 }
 .leasing-details h3 {
   font-size: 3.2rem;
@@ -81,4 +81,11 @@ h3 {
 
 .leasing-details p {
   font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.separator {
+  width: 2px;
+  height: 100%;
+  background-color: #c3c3c3;
 }
