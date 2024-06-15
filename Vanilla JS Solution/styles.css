@@ -7,3 +7,12 @@
 html {
   font-size: 62.5%;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #a2a0a0;
+  font-family: "Roboto", sans-serif;
+}
