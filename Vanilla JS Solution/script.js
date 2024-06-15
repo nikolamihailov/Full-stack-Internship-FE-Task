@@ -1,9 +1,32 @@
-const [carValueInput, carValueSlider] = document.querySelectorAll(".car-value");
-const [downPaymentInput, downPaymenSlider] = document.querySelectorAll(".down-payment");
+// selecting dropdowns
+const carType = document.querySelector(".car-type");
+const leasePeriod = document.querySelector(".lease-period");
 
-carValueInput.addEventListener("input", () => {
-    carValueSlider.value = carValueInput.value;
-});
+// selecting inputs
+const [carValueInput, carValueSlider] = document.querySelectorAll(".car-value");
+const [downPaymentInput, downPaymenSlider] = document.querySelectorAll(".down-payment-input");
+
+// selecting results display fields
+const totalLease = document.querySelector(".total-lease");
+const downPayment = document.querySelector(".down-payment");
+const montlyInstallment = document.querySelector(".montly-installment");
+const interestRate = document.querySelector(".interest-rate");
+
+// contsants
+const ANNUAL_INTEREST_RATE_NEW_CARS = 2.99;
+const ANNUAL_INTEREST_RATE_USED_CARS = 3.7;
+
+const syncInputs = (input1, input2) => {
+    input1.addEventListener('input', () => {
+        input2.value = input1.value;
+    });
+    input2.addEventListener('input', () => {
+        input1.value = input2.value;
+    });
+};
+
+syncInputs(carValueInput, carValueSlider);
+syncInputs(downPaymentInput, downPaymenSlider);
 
 carValueInput.addEventListener('blur', () => {
     const value = Number(carValueInput.value);
@@ -15,19 +38,6 @@ carValueInput.addEventListener('blur', () => {
     carValueSlider.value = carValueInput.value;
 });
 
-carValueSlider.addEventListener("input", () => {
-    carValueInput.value = carValueSlider.value;
-});
-
-
-
-downPaymentInput.addEventListener("input", () => {
-    downPaymenSlider.value = downPaymentInput.value;
-});
-
-downPaymenSlider.addEventListener("input", () => {
-    downPaymentInput.value = downPaymenSlider.value;
-});
 
 downPaymentInput.addEventListener('blur', () => {
     const value = Number(downPaymenSlider.value);
@@ -37,4 +47,4 @@ downPaymentInput.addEventListener('blur', () => {
         downPaymentInput.value = 50;
     }
     downPaymenSlider.value = downPaymentInput.value;
-});
+});;;
