@@ -58,6 +58,7 @@ downPaymentInput.addEventListener('blur', () => {
     calculateLease();
 });
 
+// calculates the lease 
 function calculateLease() {
     const carValue = parseFloat(carValueInput.value);
     const downPaymentPercent = parseFloat(downPaymentInput.value);
@@ -79,6 +80,7 @@ function calculateLease() {
 
     const totalLeaseCost = downPaymentAmount + (monthlyInstallment * leaseMonths);
 
+    // apply calcultions to result display
     totalLeaseEl.textContent = totalLeaseCost.toFixed(2);
     downPaymentEl.textContent = downPaymentAmount.toFixed(2);
     monthlyInstallmentEl.textContent = monthlyInstallment.toFixed(2);
