@@ -8,5 +8,5 @@
 - User can select lease period in months - (from 12 to 60) from dropdown
 - User can select car value - (€10,000 - €200,000) with input or slider, they are synched
 - User can select down payment percent - (10% - 50%) with input or slider, they are synched
-
 - Details for total lease cost, down payment, monthly installment and interest rate are displayed at the bottom and dynamically change based on user input
+- Error handling for all fields to ensure valid data
