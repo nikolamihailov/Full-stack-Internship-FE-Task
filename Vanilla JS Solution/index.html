@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <main>
+    <main class="main">
         <section class="calculator-section">
             <h1>Car Leasing Calculator</h1>
             <form class="lease-calculator">
@@ -38,11 +38,11 @@
                     <div class="form-section">
                         <label for="lease-period">Lease Period (months):</label>
                         <select id="lease-period" name="lease-period" class="lease-period">
-                            <option value="12" selected>12</option>
-                            <option value="12">24</option>
-                            <option value="12">36</option>
-                            <option value="12">48</option>
-                            <option value="12">60</option>
+                            <option value="12">12</option>
+                            <option value="24">24</option>
+                            <option value="36">36</option>
+                            <option value="48">48</option>
+                            <option value="60" selected>60</option>
                         </select>
                     </div>
                     <div class="form-section">
@@ -57,13 +57,13 @@
             <div class="leasing-details">
                 <h3>Leasing Details:</h3>
                 <div class="total-lease-down-payment">
-                    <p>Total Leasing Cost: €<span class="total-lease">120000</span></p>
-                    <p>Down Payment: €<span class="down-payment">12000</span></p>
+                    <p>Total Leasing Cost: €<span class="total-lease"></span></p>
+                    <p>Down Payment: €<span class="down-payment"></span></p>
                 </div>
                 <div class="separator"></div>
                 <div class="montly-installment-interst-rate">
-                    <p>Monthly Installment: €<span class="monthly-installment">2000</span></p>
-                    <p>Interest Rate: <span class="interest-rate">2.99</span>%</p>
+                    <p>Monthly Installment: €<span class="monthly-installment"></span></p>
+                    <p>Interest Rate: <span class="interest-rate"></span>%</p>
                 </div>
             </div>
         </section>
