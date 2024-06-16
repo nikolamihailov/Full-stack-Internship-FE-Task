@@ -12,7 +12,7 @@ const downPaymentEl = document.querySelector(".down-payment");
 const monthlyInstallmentEl = document.querySelector(".monthly-installment");
 const interestRateEl = document.querySelector(".interest-rate");
 
-// contsants
+// constants
 const ANNUAL_INTEREST_RATE_NEW_CARS = 2.99;
 const ANNUAL_INTEREST_RATE_USED_CARS = 3.7;
 
@@ -34,7 +34,7 @@ syncInputs(downPaymentInput, downPaymenSlider);
 carType.addEventListener('change', calculateLease);
 leasePeriod.addEventListener('change', calculateLease);
 
-// checks on blur if the user types something invalid
+// checks on blur if the user types something invalid for car value
 carValueInput.addEventListener('blur', () => {
     const value = Number(carValueInput.value);
     if (isNaN(value) || value < 10000) {
@@ -46,7 +46,7 @@ carValueInput.addEventListener('blur', () => {
     calculateLease();
 });
 
-// checks on blur if the user types something invalid
+// checks on blur if the user types something invalid for down payment percent
 downPaymentInput.addEventListener('blur', () => {
     const value = Number(downPaymentInput.value);
     if (isNaN(value) || value < 10) {
