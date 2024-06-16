@@ -58,9 +58,9 @@ function calculateLease() {
     const leaseMonths = parseInt(leasePeriod.value);
     const annualInterestRate = carType.value === "brand-new" ? ANNUAL_INTEREST_RATE_NEW_CARS : ANNUAL_INTEREST_RATE_USED_CARS;
     // guards to prevent calculations with invalid numbers
-    if (carValue > 200000 || carValue < 10000)
+    if (!carValue || carValue > 200000 || carValue < 10000)
         return;
-    if (downPaymentPercent > 50 || downPaymentPercent < 10)
+    if (!downPaymentPercent || downPaymentPercent > 50 || downPaymentPercent < 10)
         return;
     const downPaymentAmount = (downPaymentPercent / 100) * carValue;
     const principalLeaseAmount = carValue - downPaymentAmount;
